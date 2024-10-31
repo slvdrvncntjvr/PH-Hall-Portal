@@ -1,0 +1,180 @@
+/* Overall styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Animated background */
+.background-animated {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(270deg, #6a11cb, #2575fc, #ff6bcb, #ff9472);
+    background-size: 800% 800%;
+    animation: gradient 10s ease infinite;
+    z-index: -1;
+}
+
+/* Navbar styling */
+header {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 50px;
+}
+
+.navbar nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    color: #ff6bcb;
+}
+
+/* Main container layout */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 80vh;
+    margin-top: 20px;
+}
+
+/* Left image container */
+.image-container {
+    flex: 1;
+    padding-right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease;
+}
+
+/* Login container positioning */
+.login-container {
+    flex: 1;
+    max-width: 400px;
+    width: 100%;
+    padding: 2.5rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: slideIn 1s ease-out forwards;
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Slide-in effect for login container */
+@keyframes slideIn {
+    from { transform: translateX(30px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Form styling */
+.login-container h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: #555;
+    font-weight: bold;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    transition: box-shadow 0.3s;
+}
+
+.login-container input[type="text"]:focus,
+.login-container input[type="password"]:focus {
+    box-shadow: 0 0 10px rgba(106, 17, 203, 0.2);
+    outline: none;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.login-container button:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+    transform: translateY(-3px);
+}
+
+.login-container .footer {
+    margin-top: 1rem;
+    text-align: center;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.login-container .footer a {
+    color: #6a11cb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-container .footer a:hover {
+    text-decoration: underline;
+}

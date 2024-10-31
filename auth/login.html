@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Login</title>
+    <link rel="stylesheet" href="styles/login.css" />
+</head>
+<body>
+    <!-- Navigation bar -->
+    <header>
+        <div class="navbar">
+            <img src="public/images/puplogo.png" alt="University Logo" class="logo" />
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content area -->
+    <main class="main-container">
+        <!-- Left image section -->
+        <div class="image-container">
+            <img src="public/images/pupimage.jpg" alt="University Image" />
+        </div>
+
+        <!-- Right login section -->
+        <div class="login-container">
+            <h2>University Login</h2>
+            <form>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required placeholder="Enter your username">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+                <button type="submit">Login</button>
+            </form>
+            <div class="footer">
+                <p>Forgot your password? <a href="forgot-password.html">Click here</a></p>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/animations.js"></script>
+</body>
+</html>
